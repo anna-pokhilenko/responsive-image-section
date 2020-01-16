@@ -17,10 +17,13 @@ html {
   box-sizing: inherit;
 }
 
-img {
+.img-flex {
   width: 100%;
   display: block;
-  padding: 2rem 1rem;
+}
+
+img {
+  padding: 1rem;
   margin: 0 auto;
   max-width: 50em;
   margin-bottom: 1.5rem;
@@ -32,13 +35,18 @@ body {
 }
 
 a {
+  display: inline-block;
   color: #fff;
   text-decoration: none;
   background-color: #555;
-  padding: 0.5em 0.75em;
+  padding: .5em .75em;
   border: 1px solid #555;
   border-radius: 4px;
-  margin: 2rem 1rem;
+  margin: 1rem;
+}
+
+a:hover {
+  background-color: #000;
 }
 
 h1 {
@@ -53,8 +61,14 @@ strong {
 
 p {
   padding-left: 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   margin: 0;
+}
+
+.wrapper {
+  align-items: center;
+  max-width: 50em;
+  margin: 0 auto;
 }
 
 @media only screen and (min-width: 25em) {
@@ -65,13 +79,6 @@ p {
   }
 
 }
-
-.content,
-.image {
- max-width: 50em;
-}
-
-
 
 @media only screen and (min-width: 38em) {
 
@@ -85,22 +92,20 @@ p {
     margin: 0 0 1.4rem;
   }
 
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
+  .content {
+    width: 50%;
+    margin-top: 2rem;
+  }
 
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.content {
-  width: 50%;
-  margin-top: 2rem;
-}
-
-.image {
-  margin-top: 3.5rem;
-  width: 50%;
-}
+  .image {
+    margin-top: 3.5rem;
+    width: 50%;
+  }
 
 }
 
@@ -121,7 +126,15 @@ p {
   }
 
   .image {
-    margin-top: 1rem;
+    margin-top: 2rem;
+  }
+
+}
+
+@media only screen and (min-width: 90em) {
+
+  html {
+    font-size: 130%;
   }
 
 }
